@@ -131,6 +131,8 @@ public class RoleBasedAuthorizationStrategy extends AuthorizationStrategy {
 
     @Override
     public ACL getACL(AbstractItem project) {
+      System.out.println("GOOD TIMES!!");
+      System.out.println("project.getFullName(): " + project.getFullName());
       return getACL(PROJECT, project.getFullName(), RoleType.Project, project);
     }
 
